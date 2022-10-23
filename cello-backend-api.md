@@ -1,5 +1,9 @@
 # API Documentation (Cello Exercise Index)
 
+# Implemented
+Currently nothing!
+
+# Subject to change
 ## Get a list of all books 
 ```
 GET /api/book
@@ -40,4 +44,4 @@ Example response:
 ]
 ```
 
-## Other stuff coming soon!
+# Not implemented yet
