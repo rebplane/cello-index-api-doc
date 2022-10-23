@@ -103,7 +103,8 @@ Example response: /api/exercise/1
                   {"level": 2, "tag_name": "Spicatto}],
         "book_id": 1,
         "book_name": "Title 1",
-        "author": "Author 1"
+        "author": "Author 1",
+        "date": "2019"
     },
     {
         "id": 2
@@ -112,7 +113,8 @@ Example response: /api/exercise/1
                   {"level": 2, "tag_name": "Spicatto}],
         "book_id": 2,
         "book_name": "Title 2",
-        "author": "Author 2"
+        "author": "Author 2",
+        "date": "2019",
     },
     ...
 ]
@@ -131,6 +133,8 @@ Example response: /api/exercise/1
     "treble": false,
     "book_id": 2,
     "book_name": "Title 2"
+    "author": "Mr. Author",
+    "date": "2019"
 }
 ```
 
@@ -148,7 +152,8 @@ Example response: /api/exercise/Author1
                   {"id": 2, "level": 2, "tag_name": "Spicatto}],
         "book_id": 1,
         "book_name": "Title 1"
-        "author": "Author1"
+        "author": "Author1",
+        "date": "2017",
     },
     {
         "id": 3
@@ -157,7 +162,8 @@ Example response: /api/exercise/Author1
                   {"id": 1, "level": 2, "tag_name": "Spicatto}],
         "book_id": 3,
         "book_name": "Title 3",
-        "author": "Author 1"
+        "author": "Author 1",
+        "date": "2017"
     },
     ...
 ]
@@ -175,8 +181,9 @@ Example response: /api/exercise/tag/1
         "page_and_exercise": "pg. 50 Exercise for the Right Hand",
         "tags":  [{"id": 1, "level": 1, "tag_name": "Stacatto"}]
         "book_id": 1,
-        "book_name": "Title 1"
-        "author": "Author 1"
+        "book_name": "Title 1",
+        "author": "Author 1",
+        "date": "2017"
     },
     {
         "id": 3
@@ -185,7 +192,8 @@ Example response: /api/exercise/tag/1
                   {"id": 2, "level": 2, "tag_name": "Spicatto}],
         "book_id": 3,
         "book_name": "Title 3",
-        "author": "Author 1"
+        "author": "Author 1",
+        "date": "2017"
     },
     ...
 ]
