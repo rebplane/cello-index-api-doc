@@ -28,7 +28,7 @@ Example response:
 
 ## Get a list of all tags
 ```
-GET /api/tags
+GET /api/tag
 ```
 Example response:
 ```
@@ -71,9 +71,9 @@ Example response:
 
 ## Get a list of all tags for a given level - RACHEL
 ```
-GET /api/tags/<levelnum>
+GET /api/tag/<levelnum>
 ```
-Example response: /api/tags/1
+Example response: /api/tag/1
 ```
 [
     {
