@@ -234,7 +234,7 @@ level | STRING | YES | Tag level (for now just 1, 2, or 3)
 tag_name | STRING | YES |
 
 
-## Add a exercise information about a single exercise to the table - REBECCA
+## Add exercise information about a single exercise to the table - REBECCA
 ```
 POST /api/exerciseinfo
 ```
