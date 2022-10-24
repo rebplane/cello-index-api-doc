@@ -131,10 +131,13 @@ Example response: /api/exercise/1
     "side": "Right side",
     "tenor": true,
     "treble": false,
+    "page_and_exercise": "pg. 2 exercise 1"
     "book_id": 2,
     "book_name": "Title 2"
     "author": "Mr. Author",
     "date": "2019"
+    "tags": [{"id": 1, "level": 1, "tag_name": "Stacatto"}, 
+             {"id": 1, "level": 2, "tag_name": "Spicatto}],
 }
 ```
 
@@ -206,3 +209,48 @@ GET /api/author
 ```
 {"authors": ["Author 1", "Author 2", "Third Author"]}
 ```
+
+# Requires authentication (admin permissions)
+## Add a book to the table - REBECCA
+```
+POST /api/book
+```
+Parameters:
+
+Name | Type | Mandatory | Description
+------------ | ------------ | ------------ | ------------
+title | STRING | YES | 
+author | STRING | YES |
+date | STRING | YES | Date that the book was published
+link | STRING | YES |
+
+## Add a tag to the table - REBECCA
+```
+POST /api/tag
+```
+Name | Type | Mandatory | Description
+------------ | ------------ | ------------ | ------------
+level | STRING | YES | Tag level (for now just 1, 2, or 3)
+tag_name | STRING | YES |
+
+
+## Add a exercise information about a single exercise to the table - REBECCA
+```
+POST /api/exerciseinfo
+```
+Name | Type | Mandatory | Description
+------------ | ------------ | ------------ | ------------
+side | STRING | YES | 
+tenor | BOOLEAN | YES |
+treble | BOOLEAN | YES |
+book_id | INTEGER | YES | The book ID to which this exercise belongs
+page_and_exercise | STRING | YES
+
+## Add an exercise and its tag to the database - REBECCA
+```
+POST /api/exercise
+```
+Name | Type | Mandatory | Description
+------------ | ------------ | ------------ | ------------
+exercise_id | INTEGER | YES | 
+tag_id | INTEGER | YES
