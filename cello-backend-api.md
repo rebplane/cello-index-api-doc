@@ -52,10 +52,11 @@ Example response: /api/exerciseinfo
 ```
 [
     {
-        "id": 1
-        "page_and_exercise": "pg. 50 Exercise for the Right Hand",
-        "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
-                  {"level": 2, "tag_name": "Spicatto}],
+        "id": 1,
+        "side": "Left Side",
+        "page_and_exercise": "pg. 11 Exercise 10",
+        "tenor": true,
+        "treble": false,
         "book": {
             "id": 2,
             "title": "Book 2",
@@ -65,19 +66,19 @@ Example response: /api/exerciseinfo
         }
     },
     {
-        "id": 2
-        "page_and_exercise": "pg. 50 Exercise in thirds",
-        "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
-                  {"level": 2, "tag_name": "Spicatto}],
+        "id": 2,
+        "side": "Right Side",
+        "page_and_exercise": "pg. 12 Exercise 10",
+        "tenor": true,
+        "treble": false,
         "book": {
-            "id": 2,
-            "title": "Book 2",
-            "author": "Author 2",
-            "date": "1990",
-            "link": "www.book.com"
+            "id": 3,
+            "title": "Book 3",
+            "author": "Author 3",
+            "date": "1991",
+            "link": "www.book2.com"
         }
-    },
-    ...
+    }
 ]
 ```
 
@@ -154,10 +155,11 @@ Example response: /api/exercise/1
 ```
 [
     {
-        "id": 1
-        "page_and_exercise": "pg. 50 Exercise for the Right Hand",
-        "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
-                  {"level": 2, "tag_name": "Spicatto}],
+        "id": 1,
+        "side": "Left Side",
+        "page_and_exercise": "pg. 11 Exercise 10",
+        "tenor": true,
+        "treble": false,
         "book": {
             "id": 2,
             "title": "Book 2",
@@ -167,16 +169,17 @@ Example response: /api/exercise/1
         }
     },
     {
-        "id": 2
-        "page_and_exercise": "pg. 50 Exercise in thirds",
-        "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
-                  {"level": 2, "tag_name": "Spicatto}],
+        "id": 2,
+        "side": "Right Side",
+        "page_and_exercise": "pg. 12 Exercise 10",
+        "tenor": true,
+        "treble": false,
         "book": {
-            "id": 2,
-            "title": "Book 2",
-            "author": "Author 2",
-            "date": "1990",
-            "link": "www.book.com"
+            "id": 3,
+            "title": "Book 3",
+            "author": "Author 3",
+            "date": "1991",
+            "link": "www.book2.com"
         }
     },
     ...
