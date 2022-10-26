@@ -109,9 +109,9 @@ Example response: /api/exercise/1
 
 ## Get a list of all tags for an exercise - ??
 ```
-GET /api/tag/exercise/<exercise_id>
+GET /api/tag/exercise/tags/<exercise_id>
 ```
-Example response: /api/exerciseinfo/tag/1
+Example response: /api/exerciseinfo/tags/1
 ```
 [
     {
@@ -149,9 +149,9 @@ Example response: /api/tag/level/1
 
 ## Get a list of 50 exercises starting from num 
 ``` 
-GET /api/exerciseinfo/<num>
+GET /api/exerciseinfo/start/<num>
 ```
-Example response: /api/exercise/1
+Example response: /api/exerciseinfo/start/1
 ```
 [
     {
@@ -190,7 +190,7 @@ Example response: /api/exercise/1
 ``` 
 GET /api/exerciseinfo/author/<authorname>
 ```
-Example response: /api/exercise/Author1
+Example response: /api/exercise/author/Author1
 ```
 [
     {
