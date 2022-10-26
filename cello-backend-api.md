@@ -56,20 +56,26 @@ Example response: /api/exercise/1
         "page_and_exercise": "pg. 50 Exercise for the Right Hand",
         "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
                   {"level": 2, "tag_name": "Spicatto}],
-        "book_id": 1,
-        "book_title": "Title 1",
-        "author": "Author 1",
-        "date": "2019"
+        "book": {
+            "id": 2,
+            "title": "Book 2",
+            "author": "Author 2",
+            "date": "1990",
+            "link": "www.book.com"
+        }
     },
     {
         "id": 2
         "page_and_exercise": "pg. 50 Exercise in thirds",
         "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
                   {"level": 2, "tag_name": "Spicatto}],
-        "book_id": 2,
-        "book_title": "Title 2",
-        "author": "Author 2",
-        "date": "2019",
+        "book": {
+            "id": 2,
+            "title": "Book 2",
+            "author": "Author 2",
+            "date": "1990",
+            "link": "www.book.com"
+        }
     },
     ...
 ]
@@ -110,20 +116,26 @@ Example response: /api/exercise/1
         "page_and_exercise": "pg. 50 Exercise for the Right Hand",
         "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
                   {"level": 2, "tag_name": "Spicatto}],
-        "book_id": 1,
-        "book_title": "Title 1",
-        "author": "Author 1",
-        "date": "2019"
+        "book": {
+            "id": 2,
+            "title": "Book 2",
+            "author": "Author 2",
+            "date": "1990",
+            "link": "www.book.com"
+        }
     },
     {
         "id": 2
         "page_and_exercise": "pg. 50 Exercise in thirds",
         "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
                   {"level": 2, "tag_name": "Spicatto}],
-        "book_id": 2,
-        "book_title": "Title 2",
-        "author": "Author 2",
-        "date": "2019",
+        "book": {
+            "id": 2,
+            "title": "Book 2",
+            "author": "Author 2",
+            "date": "1990",
+            "link": "www.book.com"
+        }
     },
     ...
 ]
