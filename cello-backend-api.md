@@ -1,9 +1,6 @@
 # API Documentation (Cello Exercise Index)
 
 # Implemented
-Currently nothing!
-
-# Subject to change
 ## Get a list of all books 
 ```
 GET /api/book
@@ -11,13 +8,15 @@ GET /api/book
 Example response:
 ```
 [
-    {
+    {   
+        "id": 1,
         "title": "Title 1",
         "author": "Author 1",
         "date": "2019",
         "link": "www.test.com"
     },
     {
+        "id": 2,
         "title": "Title 2",
         "author": "Author 2",
         "date": "2019",
@@ -25,6 +24,7 @@ Example response:
     }
 ]
 ```
+
 
 ## Get a list of all tags
 ```
@@ -44,36 +44,45 @@ Example response:
 ]
 ```
 
-# Not implemented yet - TO DO
-## Get a list of all books (same as above, but we need to include ID) - RACHEL
+## Get a list of exercises
+``` 
+GET /api/exercise
 ```
-GET /api/book
-```
-Example response:
+Example response: /api/exercise/1
 ```
 [
-    {   
-        "id": 1,
-        "title": "Title 1",
+    {
+        "id": 1
+        "page_and_exercise": "pg. 50 Exercise for the Right Hand",
+        "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
+                  {"level": 2, "tag_name": "Spicatto}],
+        "book_id": 1,
+        "book_title": "Title 1",
         "author": "Author 1",
-        "date": "2019",
-        "link": "www.test.com"
+        "date": "2019"
     },
     {
-        "id": 2,
-        "title": "Title 2",
+        "id": 2
+        "page_and_exercise": "pg. 50 Exercise in thirds",
+        "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
+                  {"level": 2, "tag_name": "Spicatto}],
+        "book_id": 2,
+        "book_title": "Title 2",
         "author": "Author 2",
         "date": "2019",
-        "link": "www.book2.com"
-    }
+    },
+    ...
 ]
 ```
+# Subject to change
+
+# Not implemented yet - TO DO
 
 ## Get a list of all tags for a given level - RACHEL
 ```
-GET /api/tag/<levelnum>
+GET /api/tag/level/<levelnum>
 ```
-Example response: /api/tag/1
+Example response: /api/tag/level/1
 ```
 [
     {
@@ -89,7 +98,7 @@ Example response: /api/tag/1
 ]
 ```
 
-## Get a list of 50 exercises starting from num - BENJAMIN
+## Get a list of 50 exercises starting from num 
 ``` 
 GET /api/exercise/<num>
 ```
