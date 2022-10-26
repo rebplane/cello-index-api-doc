@@ -44,11 +44,11 @@ Example response:
 ]
 ```
 
-## Get a list of exercises
+## Get a list of all exercises
 ``` 
-GET /api/exercise
+GET /api/exerciseinfo
 ```
-Example response: /api/exercise/1
+Example response: /api/exerciseinfo
 ```
 [
     {
@@ -80,9 +80,51 @@ Example response: /api/exercise/1
     ...
 ]
 ```
+
+## Get the exercise info of an exercise
+``` 
+GET /api/exerciseinfo/<num>
+```
+Example response: /api/exercise/1
+```
+{
+    "id": 1,
+    "side": "Right side",
+    "tenor": true,
+    "treble": false,
+    "page_and_exercise": "pg. 2 exercise 1"
+    "book": {
+            "id": 2,
+            "title": "Book 2",
+            "author": "Author 2",
+            "date": "1990",
+            "link": "www.book.com"
+    }
+}
+```
 # Subject to change
 
 # Not implemented yet - TO DO
+
+## Get a list of all tags for an exercise - ??
+```
+GET /api/exerciseinfo/tag/<exercise_id>
+```
+Example response: /api/exerciseinfo/tag/1
+```
+[
+    {
+        "id": 1,
+        "level": 1,
+        "tag_name": "Spicatto"
+    },
+    {   
+        "id": 2,
+        "level": 1,
+        "tag_name": "Arpeggios"
+    }
+]
+```
 
 ## Get a list of all tags for a given level - RACHEL
 ```
@@ -139,27 +181,6 @@ Example response: /api/exercise/1
     },
     ...
 ]
-```
-
-## Get the exercise info of an exercise - EREN
-``` 
-GET /api/exerciseinfo/<num>
-```
-Example response: /api/exercise/1
-```
-{
-    "id": 1,
-    "side": "Right side",
-    "tenor": true,
-    "treble": false,
-    "page_and_exercise": "pg. 2 exercise 1"
-    "book_id": 2,
-    "book_title": "Title 2"
-    "author": "Mr. Author",
-    "date": "2019"
-    "tags": [{"id": 1, "level": 1, "tag_name": "Stacatto"}, 
-             {"id": 1, "level": 2, "tag_name": "Spicatto}],
-}
 ```
 
 ## Get all exercises by author name - EREN
@@ -230,6 +251,7 @@ GET /api/author
 ```
 {"authors": ["Author 1", "Author 2", "Third Author"]}
 ```
+
 
 # Requires authentication (admin permissions)
 ## Add a book to the table - REBECCA
