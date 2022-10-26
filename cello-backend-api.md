@@ -102,7 +102,7 @@ Example response: /api/exercise/1
         "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
                   {"level": 2, "tag_name": "Spicatto}],
         "book_id": 1,
-        "book_name": "Title 1",
+        "book_title": "Title 1",
         "author": "Author 1",
         "date": "2019"
     },
@@ -112,7 +112,7 @@ Example response: /api/exercise/1
         "tags":  [{"level": 1, "tag_name": "Stacatto"}, 
                   {"level": 2, "tag_name": "Spicatto}],
         "book_id": 2,
-        "book_name": "Title 2",
+        "book_title": "Title 2",
         "author": "Author 2",
         "date": "2019",
     },
@@ -133,7 +133,7 @@ Example response: /api/exercise/1
     "treble": false,
     "page_and_exercise": "pg. 2 exercise 1"
     "book_id": 2,
-    "book_name": "Title 2"
+    "book_title": "Title 2"
     "author": "Mr. Author",
     "date": "2019"
     "tags": [{"id": 1, "level": 1, "tag_name": "Stacatto"}, 
@@ -154,7 +154,7 @@ Example response: /api/exercise/Author1
         "tags":  [{"id": 1, "level": 1, "tag_name": "Stacatto"}, 
                   {"id": 2, "level": 2, "tag_name": "Spicatto}],
         "book_id": 1,
-        "book_name": "Title 1"
+        "book_title": "Title 1"
         "author": "Author1",
         "date": "2017",
     },
@@ -164,7 +164,7 @@ Example response: /api/exercise/Author1
         "tags":  [{"id": 1, "level": 1, "tag_name": "Stacatto"}, 
                   {"id": 1, "level": 2, "tag_name": "Spicatto}],
         "book_id": 3,
-        "book_name": "Title 3",
+        "book_title": "Title 3",
         "author": "Author 1",
         "date": "2017"
     },
@@ -184,7 +184,7 @@ Example response: /api/exercise/tag/1
         "page_and_exercise": "pg. 50 Exercise for the Right Hand",
         "tags":  [{"id": 1, "level": 1, "tag_name": "Stacatto"}]
         "book_id": 1,
-        "book_name": "Title 1",
+        "book_title": "Title 1",
         "author": "Author 1",
         "date": "2017"
     },
@@ -194,7 +194,7 @@ Example response: /api/exercise/tag/1
         "tags":  [{"id": 1, "level": 1, "tag_name": "Stacatto"}, 
                   {"id": 2, "level": 2, "tag_name": "Spicatto}],
         "book_id": 3,
-        "book_name": "Title 3",
+        "book_title": "Title 3",
         "author": "Author 1",
         "date": "2017"
     },
