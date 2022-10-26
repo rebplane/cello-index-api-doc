@@ -109,7 +109,7 @@ Example response: /api/exercise/1
 
 ## Get a list of all tags for an exercise - ??
 ```
-GET /api/exerciseinfo/tag/<exercise_id>
+GET /api/tag/exercise/<exercise_id>
 ```
 Example response: /api/exerciseinfo/tag/1
 ```
@@ -149,7 +149,7 @@ Example response: /api/tag/level/1
 
 ## Get a list of 50 exercises starting from num 
 ``` 
-GET /api/exercise/<num>
+GET /api/exerciseinfo/<num>
 ```
 Example response: /api/exercise/1
 ```
@@ -188,60 +188,77 @@ Example response: /api/exercise/1
 
 ## Get all exercises by author name - EREN
 ``` 
-GET /api/exercise/author/<authorname>
+GET /api/exerciseinfo/author/<authorname>
 ```
 Example response: /api/exercise/Author1
 ```
 [
     {
-        "id": 1
-        "page_and_exercise": "pg. 50 Exercise for the Right Hand",
-        "tags":  [{"id": 1, "level": 1, "tag_name": "Stacatto"}, 
-                  {"id": 2, "level": 2, "tag_name": "Spicatto}],
-        "book_id": 1,
-        "book_title": "Title 1"
-        "author": "Author1",
-        "date": "2017",
+        "id": 1,
+        "side": "Right side",
+        "tenor": true,
+        "treble": false,
+        "page_and_exercise": "pg. 2 exercise 1"
+        "book": {
+                "id": 2,
+                "title": "Book 2",
+                "author": "Author 1",
+                "date": "1990",
+                "link": "www.book.com"
+        }
     },
     {
-        "id": 3
-        "page_and_exercise": "pg. 50 Exercise in thirds",
-        "tags":  [{"id": 1, "level": 1, "tag_name": "Stacatto"}, 
-                  {"id": 1, "level": 2, "tag_name": "Spicatto}],
-        "book_id": 3,
-        "book_title": "Title 3",
-        "author": "Author 1",
-        "date": "2017"
-    },
+        "id": 3,
+        "side": "Right side",
+        "tenor": true,
+        "treble": false,
+        "page_and_exercise": "pg. 2 exercise 1"
+        "book": {
+                "id": 5,
+                "title": "Book 5",
+                "author": "Author 1",
+                "date": "1980",
+                "link": "www.book5.com"
+        }
+    }
     ...
 ]
 ```
 
 ## Get all exercises with tag id(s) - EREN
 ```
-GET /api/exercise/tag/<tags>
+GET /api/exerciseinfo/tag/<tags>
 ```
 Example response: /api/exercise/tag/1
 ```
 [
     {
-        "id": 1
-        "page_and_exercise": "pg. 50 Exercise for the Right Hand",
-        "tags":  [{"id": 1, "level": 1, "tag_name": "Stacatto"}]
-        "book_id": 1,
-        "book_title": "Title 1",
-        "author": "Author 1",
-        "date": "2017"
+        "id": 2,
+        "side": "Right side",
+        "tenor": true,
+        "treble": false,
+        "page_and_exercise": "pg. 2 exercise 1"
+        "book": {
+                "id": 5,
+                "title": "Book 5",
+                "author": "Author 1",
+                "date": "1980",
+                "link": "www.book5.com"
+        }
     },
     {
-        "id": 3
-        "page_and_exercise": "pg. 50 Exercise in thirds",
-        "tags":  [{"id": 1, "level": 1, "tag_name": "Stacatto"}, 
-                  {"id": 2, "level": 2, "tag_name": "Spicatto}],
-        "book_id": 3,
-        "book_title": "Title 3",
-        "author": "Author 1",
-        "date": "2017"
+        "id": 3,
+        "side": "Right side",
+        "tenor": true,
+        "treble": false,
+        "page_and_exercise": "pg. 2 exercise 1"
+        "book": {
+                "id": 5,
+                "title": "Book 5",
+                "author": "Author 1",
+                "date": "1980",
+                "link": "www.book5.com"
+        }
     },
     ...
 ]
