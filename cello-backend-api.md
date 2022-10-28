@@ -1,8 +1,9 @@
 # API Documentation (Cello Exercise Index)
 
-### Table of contents
+## Table of contents
 - [Books](#Books)
 - [Tags](#Tags)
+- [Exercises](#Exercises)
 
 # Implemented
 # Books <a name="Books"></a>
@@ -49,6 +50,7 @@ Example response:
 ]
 ```
 
+# Exercises <a name="Exercises"></a>
 ## Get a list of all exercises
 ``` 
 GET /api/exerciseinfo
@@ -108,7 +110,6 @@ Example response: /api/exercise/1
     }
 }
 ```
-# Subject to change
 
 # Not implemented yet - TO DO
 
@@ -278,8 +279,8 @@ GET /api/author
 ```
 
 
-# Requires authentication (admin permissions)
-## Add a book to the table - REBECCA
+# Requires authentication (admin permissions) (implemented)
+## Add a book to the table 
 ```
 POST /api/book
 ```
@@ -292,7 +293,7 @@ author | STRING | YES |
 date | STRING | YES | Date that the book was published
 link | STRING | YES |
 
-## Add a tag to the table - REBECCA
+## Add a tag to the table 
 ```
 POST /api/tag
 ```
@@ -302,7 +303,7 @@ level | STRING | YES | Tag level (for now just 1, 2, or 3)
 tag_name | STRING | YES |
 
 
-## Add exercise information about a single exercise to the table - REBECCA
+## Add exercise information about a single exercise to the table 
 ```
 POST /api/exerciseinfo
 ```
@@ -314,7 +315,7 @@ treble | BOOLEAN | YES |
 book_id | INTEGER | YES | The book ID to which this exercise belongs
 page_and_exercise | STRING | YES
 
-## Add an exercise and its tag to the database - REBECCA
+## Add an exercise and its tag to the database 
 ```
 POST /api/exercise
 ```
