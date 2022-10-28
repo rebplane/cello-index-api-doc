@@ -1,6 +1,10 @@
 # API Documentation (Cello Exercise Index)
 
+### Table of contents
+- [Books] (#Book)
+
 # Implemented
+# Books
 ## Get a list of all books 
 ```
 GET /api/book
