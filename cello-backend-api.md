@@ -7,6 +7,12 @@
 
 # Implemented
 # Books <a name="Books"></a>
+## Methods:
+```
+GET /api/book
+GET /api/book/<book_id>
+POST /api/book
+```
 ## Get a list of all books 
 ```
 GET /api/book
@@ -30,27 +36,69 @@ Example response:
     }
 ]
 ```
+## Get information for a single book
+``` 
+GET /api/book/<book_id>
+```
+Example response: /api/book/1
+```
+{   
+    "id": 1,
+    "title": "Title 1",
+    "author": "Author 1",
+    "date": "2019",
+    "link": "www.test.com"
+}
+```
 
 # Tags <a name="Tags"></a>
+## Methods:
+```
+GET /api/tag
+GET /api/tag/<tag_id>
+POST /api/tag
+```
 ## Get a list of all tags
 ```
 GET /api/tag
 ```
-Example response:
+Example response: /api/tag
 ```
 [
     {
+        "id": 1,
         "level": 1,
         "tag_name": "Spicatto"
     },
     {
+        "id": 2,
         "level": 2,
         "tag_name": "Staccato"
     }
 ]
 ```
 
+## Get information for a tag
+``` 
+GET /api/tag/<tag_id>
+```
+Example response: /api/tag/1
+```
+{
+    "id": 1,
+    "level": 1,
+    "tag_name": "Spicatto"
+}
+```
+
+
 # Exercises <a name="Exercises"></a>
+## Methods:
+```
+GET /api/exerciseinfo
+GET /api/exerciseinfo/<num>
+POST /api/exerciseinfo
+```
 ## Get a list of all exercises
 ``` 
 GET /api/exerciseinfo
