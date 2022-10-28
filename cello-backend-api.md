@@ -1,10 +1,11 @@
 # API Documentation (Cello Exercise Index)
 
 ### Table of contents
-- [Books] (#Book)
+- [Books](#Books)
+- [Tags](#Tags)
 
 # Implemented
-# Books
+# Books <a name="Books"></a>
 ## Get a list of all books 
 ```
 GET /api/book
@@ -29,7 +30,7 @@ Example response:
 ]
 ```
 
-
+# Tags <a name="Tags"></a>
 ## Get a list of all tags
 ```
 GET /api/tag
