@@ -251,7 +251,7 @@ Example response: /api/exerciseinfo/start/1
 ]
 ```
 
-## Get all exercises by author name / tag name - EREN
+## Get all exercises by author name / tag name / book - EREN
 ``` 
 GET /api/exerciseinfo?filters={filters}
 ```
