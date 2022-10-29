@@ -255,6 +255,13 @@ Example response: /api/exerciseinfo/start/1
 ``` 
 GET /api/exerciseinfo?filters={filters}
 ```
+Parameters:
+Name | Type | Mandatory |
+------------ | ------------ |--|
+author | STRING | NO | 
+tag_id | INTEGER | NO
+book_id | INTEGER | NO
+
 Example response: /api/exerciseinfo?author=Mr. Author&tag_id=1&tag_id=2
 ```
 [
