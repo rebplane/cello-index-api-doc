@@ -11,6 +11,7 @@
 ```
 GET /api/book
 GET /api/book/<book_id>
+GET /api/author
 POST /api/book
 ```
 ## Get a list of all books 
@@ -51,11 +52,20 @@ Example response: /api/book/1
 }
 ```
 
+## Get list of all authors 
+```
+GET /api/author
+```
+```
+{"authors": ["Author 1", "Author 2", "Third Author"]}
+```
+
 # Tags <a name="Tags"></a>
 ## Methods:
 ```
 GET /api/tag
 GET /api/tag/<tag_id>
+GET /api/tag/exercise/<exercise_id>
 POST /api/tag
 ```
 ## Get a list of all tags
@@ -89,6 +99,51 @@ Example response: /api/tag/1
     "level": 1,
     "tag_name": "Spicatto"
 }
+```
+
+## Get a list of all tags for a given level 
+```
+GET /api/tag
+```
+Parameters:
+Name | Type 
+------ | -----
+level | INTEGER  
+
+Example response: /api/tag?level=1
+```
+[
+    {
+        "id": 1,
+        "level": 1,
+        "tag_name": "Spicatto"
+    },
+    {   
+        "id": 2,
+        "level": 1,
+        "tag_name": "Arpeggios"
+    }
+]
+```
+
+## Get a list of all tags for an exercise
+```
+GET /api/tag/exercise/<exercise_id>
+```
+Example response: /api/tag/exercise/<exercise_id>
+```
+[
+    {
+        "id": 1,
+        "level": 1,
+        "tag_name": "Spicatto"
+    },
+    {   
+        "id": 2,
+        "level": 1,
+        "tag_name": "Arpeggios"
+    }
+]
 ```
 
 
@@ -160,46 +215,6 @@ Example response: /api/exercise/1
 ```
 
 # Not implemented yet - TO DO
-
-## Get a list of all tags for an exercise - ??
-```
-GET /api/tag/exercise/<exercise_id>
-```
-Example response: /api/tag/exercise/<exercise_id>
-```
-[
-    {
-        "id": 1,
-        "level": 1,
-        "tag_name": "Spicatto"
-    },
-    {   
-        "id": 2,
-        "level": 1,
-        "tag_name": "Arpeggios"
-    }
-]
-```
-
-## Get a list of all tags for a given level - RACHEL
-```
-GET /api/tag/level/<levelnum>
-```
-Example response: /api/tag/level/1
-```
-[
-    {
-        "id": 1,
-        "level": 1,
-        "tag_name": "Spicatto"
-    },
-    {   
-        "id": 2,
-        "level": 1,
-        "tag_name": "Arpeggios"
-    }
-]
-```
 
 ## Get a list of 50 exercises starting from num 
 ``` 
@@ -316,14 +331,6 @@ Example response: /api/exercise/tag/1
     },
     ...
 ]
-```
-
-## Get list of all authors - RACHEL
-```
-GET /api/author
-```
-```
-{"authors": ["Author 1", "Author 2", "Third Author"]}
 ```
 
 
