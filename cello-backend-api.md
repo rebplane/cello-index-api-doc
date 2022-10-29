@@ -163,9 +163,9 @@ Example response: /api/exercise/1
 
 ## Get a list of all tags for an exercise - ??
 ```
-GET /api/tag/exercise/tags/<exercise_id>
+GET /api/tag/exercise/<exercise_id>
 ```
-Example response: /api/exerciseinfo/tags/1
+Example response: /api/tag/exercise/<exercise_id>
 ```
 [
     {
