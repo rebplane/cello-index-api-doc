@@ -103,14 +103,10 @@ Example response: /api/tag/1
 
 ## Get a list of all tags for a given level 
 ```
-GET /api/tag
+GET /api/tag/level/<level_num>
 ```
-Parameters:
-Name | Type 
------- | -----
-level | INTEGER  
 
-Example response: /api/tag?level=1
+Example response: /api/tag/level/1
 ```
 [
     {
@@ -216,7 +212,7 @@ Example response: /api/exercise/1
 
 # Not implemented yet - TO DO
 
-## Get a list of 50 exercises starting from num 
+## Get a list of 50 exercises starting from num  - BENJAMIN
 ``` 
 GET /api/exerciseinfo/start/<num>
 ```
