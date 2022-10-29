@@ -251,11 +251,11 @@ Example response: /api/exerciseinfo/start/1
 ]
 ```
 
-## Get all exercises by author name - EREN
+## Get all exercises by author name / tag name - EREN
 ``` 
-GET /api/exerciseinfo/author/<authorname>
+GET /api/exerciseinfo?filters={filters}
 ```
-Example response: /api/exercise/author/Author1
+Example response: /api/exerciseinfo?author=Mr. Author&tag_id=1&tag_id=2
 ```
 [
     {
@@ -286,45 +286,6 @@ Example response: /api/exercise/author/Author1
                 "link": "www.book5.com"
         }
     }
-    ...
-]
-```
-
-## Get all exercises with tag id(s) - EREN
-```
-GET /api/exerciseinfo/tag/<tags>
-```
-Example response: /api/exercise/tag/1
-```
-[
-    {
-        "id": 2,
-        "side": "Right side",
-        "tenor": true,
-        "treble": false,
-        "page_and_exercise": "pg. 2 exercise 1"
-        "book": {
-                "id": 5,
-                "title": "Book 5",
-                "author": "Author 1",
-                "date": "1980",
-                "link": "www.book5.com"
-        }
-    },
-    {
-        "id": 3,
-        "side": "Right side",
-        "tenor": true,
-        "treble": false,
-        "page_and_exercise": "pg. 2 exercise 1"
-        "book": {
-                "id": 5,
-                "title": "Book 5",
-                "author": "Author 1",
-                "date": "1980",
-                "link": "www.book5.com"
-        }
-    },
     ...
 ]
 ```
