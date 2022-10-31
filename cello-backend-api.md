@@ -19,9 +19,10 @@ POST /api/book
 GET /api/book
 ```
 Parameters:
-Name | Type |
+Name | Type | Default | Description
 ------------ | ------------ |
-page | INTEGER |
+page | INTEGER | 1
+page_size | INTEGER | 50 | The number of books requested (maximum 100)
 
 Example response: /api/book?page=1
 ```
@@ -84,9 +85,10 @@ POST /api/tag
 GET /api/tag
 ```
 Parameters:
-Name | Type |
+Name | Type | Default | Description
 ------------ | ------------ |
-page | INTEGER |
+page | INTEGER | 1
+page_size | INTEGER | 50 | The number of tags requested (maximum 100)
 
 Example response: /api/tag?page=1
 ```
@@ -128,9 +130,10 @@ Example response: /api/tag/1
 GET /api/tag/level/<level_num>
 ```
 Parameters:
-Name | Type |
+Name | Type | Default | Description
 ------------ | ------------ |
-page | INTEGER |
+page | INTEGER | 1
+page_size | INTEGER | 50 | The number of tags requested (maximum 100)
 
 Example response: /api/tag/level/1?page=1
 ```
@@ -186,6 +189,12 @@ POST /api/exerciseinfo
 ``` 
 GET /api/exerciseinfo
 ```
+Parameters:
+Name | Type | Default | Description
+------------ | ------------ |
+page | INTEGER | 1
+page_size | INTEGER | 50 | The number of exercises requested (maximum 100)
+
 Example response: /api/exerciseinfo?page=1
 ```
 {
