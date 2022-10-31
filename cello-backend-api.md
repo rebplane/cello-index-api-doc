@@ -22,24 +22,31 @@ Parameters:
 Name | Type |
 ------------ | ------------ |
 page | INTEGER |
+
 Example response: /api/book?page=1
 ```
-[
-    {   
-        "id": 1,
-        "title": "Title 1",
-        "author": "Author 1",
-        "date": "2019",
-        "link": "www.test.com"
-    },
-    {
-        "id": 2,
-        "title": "Title 2",
-        "author": "Author 2",
-        "date": "2019",
-        "link": "www.book2.com"
-    }
-]
+{
+    "count": 31,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "title": "Nouvelle Méthode de Violoncelle, Deuxième Partie *Part Two begins page 151",
+            "author": "Abbiate, Louis",
+            "date": "1900",
+            "link": "https://imslp.org/wiki/Nouvelle_m%C3%A9thode_de_violoncelle_(Abbiate%2C_Louis)"
+        },
+        {
+            "id": 2,
+            "title": "La Technique du Violoncelle, Part Two, Gammes et Arpèges",
+            "author": "Bazelaire, Paul",
+            "date": "1925",
+            "link": "https://imslp.org/wiki/La_Technique_du_Violoncelle_(Bazelaire%2C_Paul)"
+        },
+        ...
+    ]
+}
 ```
 ## Get information for a single book
 ``` 
@@ -274,46 +281,6 @@ Example response: /api/exerciseinfo?author=Mr. Author&tag_id=1&tag_id=2
     ...
 ]
 ```
-
-## Get all exercises with tag id(s) - EREN
-```
-GET /api/exerciseinfo/tag/<tags>
-```
-Example response: /api/exercise/tag/1
-```
-[
-    {
-        "id": 2,
-        "side": "Right side",
-        "tenor": true,
-        "treble": false,
-        "page_and_exercise": "pg. 2 exercise 1"
-        "book": {
-                "id": 5,
-                "title": "Book 5",
-                "author": "Author 1",
-                "date": "1980",
-                "link": "www.book5.com"
-        }
-    },
-    {
-        "id": 3,
-        "side": "Right side",
-        "tenor": true,
-        "treble": false,
-        "page_and_exercise": "pg. 2 exercise 1"
-        "book": {
-                "id": 5,
-                "title": "Book 5",
-                "author": "Author 1",
-                "date": "1980",
-                "link": "www.book5.com"
-        }
-    },
-    ...
-]
-```
-
 
 # Requires authentication (admin permissions) (implemented)
 ## Add a book to the table 
