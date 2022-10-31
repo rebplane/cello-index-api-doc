@@ -87,6 +87,7 @@ Parameters:
 Name | Type |
 ------------ | ------------ |
 page | INTEGER |
+
 Example response: /api/tag?page=1
 ```
 {
