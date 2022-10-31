@@ -18,7 +18,11 @@ POST /api/book
 ```
 GET /api/book
 ```
-Example response:
+Parameters:
+Name | Type |
+------------ | ------------ |
+page | INTEGER |
+Example response: /api/book?page=1
 ```
 [
     {   
@@ -72,20 +76,30 @@ POST /api/tag
 ```
 GET /api/tag
 ```
-Example response: /api/tag
+Parameters:
+Name | Type |
+------------ | ------------ |
+page | INTEGER |
+Example response: /api/tag?page=1
 ```
-[
-    {
-        "id": 1,
-        "level": 1,
-        "tag_name": "Spicatto"
-    },
-    {
-        "id": 2,
-        "level": 2,
-        "tag_name": "Staccato"
-    }
-]
+{
+    "count": 236,
+    "next": "http://127.0.0.1:8000/api/tag/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "level": 1,
+            "tag_name": "Neck Positions Only"
+        },
+        {
+            "id": 2,
+            "level": 1,
+            "tag_name": "Thumb Positions Only"
+        },
+        ...
+    ]
+}
 ```
 
 ## Get information for a tag
@@ -105,21 +119,31 @@ Example response: /api/tag/1
 ```
 GET /api/tag/level/<level_num>
 ```
+Parameters:
+Name | Type |
+------------ | ------------ |
+page | INTEGER |
 
-Example response: /api/tag/level/1
+Example response: /api/tag/level/1?page=1
 ```
-[
-    {
-        "id": 1,
-        "level": 1,
-        "tag_name": "Spicatto"
-    },
-    {   
-        "id": 2,
-        "level": 1,
-        "tag_name": "Arpeggios"
-    }
-]
+{
+    "count": 39,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "level": 1,
+            "tag_name": "Neck Positions Only"
+        },
+        {
+            "id": 2,
+            "level": 1,
+            "tag_name": "Thumb Positions Only"
+        },
+        ...
+    ]
+}
 ```
 
 ## Get a list of all tags for an exercise
@@ -154,38 +178,31 @@ POST /api/exerciseinfo
 ``` 
 GET /api/exerciseinfo
 ```
-Example response: /api/exerciseinfo
+Example response: /api/exerciseinfo?page=1
 ```
-[
-    {
-        "id": 1,
-        "side": "Left Side",
-        "page_and_exercise": "pg. 11 Exercise 10",
-        "tenor": true,
-        "treble": false,
-        "book": {
-            "id": 2,
-            "title": "Book 2",
-            "author": "Author 2",
-            "date": "1990",
-            "link": "www.book.com"
-        }
-    },
-    {
-        "id": 2,
-        "side": "Right Side",
-        "page_and_exercise": "pg. 12 Exercise 10",
-        "tenor": true,
-        "treble": false,
-        "book": {
-            "id": 3,
-            "title": "Book 3",
-            "author": "Author 3",
-            "date": "1991",
-            "link": "www.book2.com"
-        }
-    }
-]
+{
+    "count": 1896,
+    "next": "http://127.0.0.1:8000/api/exerciseinfo/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "side": "Left Side",
+            "page_and_exercise": "pp. 151–164",
+            "tenor": false,
+            "treble": false,
+            "book_id": 1,
+            "book": {
+                "id": 1,
+                "title": "Nouvelle Méthode de Violoncelle, Deuxième Partie *Part Two begins page 151",
+                "author": "Abbiate, Louis",
+                "date": "1900",
+                "link": "https://imslp.org/wiki/Nouvelle_m%C3%A9thode_de_violoncelle_(Abbiate%2C_Louis)"
+            }
+        },
+        ...
+    ]
+}
 ```
 
 ## Get the exercise info of an exercise
@@ -211,45 +228,6 @@ Example response: /api/exercise/1
 ```
 
 # Not implemented yet - TO DO
-
-## Get a list of 50 exercises starting from num  - BENJAMIN
-``` 
-GET /api/exerciseinfo/start/<num>
-```
-Example response: /api/exerciseinfo/start/1
-```
-[
-    {
-        "id": 1,
-        "side": "Left Side",
-        "page_and_exercise": "pg. 11 Exercise 10",
-        "tenor": true,
-        "treble": false,
-        "book": {
-            "id": 2,
-            "title": "Book 2",
-            "author": "Author 2",
-            "date": "1990",
-            "link": "www.book.com"
-        }
-    },
-    {
-        "id": 2,
-        "side": "Right Side",
-        "page_and_exercise": "pg. 12 Exercise 10",
-        "tenor": true,
-        "treble": false,
-        "book": {
-            "id": 3,
-            "title": "Book 3",
-            "author": "Author 3",
-            "date": "1991",
-            "link": "www.book2.com"
-        }
-    },
-    ...
-]
-```
 
 ## Get all exercises by author name / tag name / book - EREN
 ``` 
@@ -293,6 +271,45 @@ Example response: /api/exerciseinfo?author=Mr. Author&tag_id=1&tag_id=2
                 "link": "www.book5.com"
         }
     }
+    ...
+]
+```
+
+## Get all exercises with tag id(s) - EREN
+```
+GET /api/exerciseinfo/tag/<tags>
+```
+Example response: /api/exercise/tag/1
+```
+[
+    {
+        "id": 2,
+        "side": "Right side",
+        "tenor": true,
+        "treble": false,
+        "page_and_exercise": "pg. 2 exercise 1"
+        "book": {
+                "id": 5,
+                "title": "Book 5",
+                "author": "Author 1",
+                "date": "1980",
+                "link": "www.book5.com"
+        }
+    },
+    {
+        "id": 3,
+        "side": "Right side",
+        "tenor": true,
+        "treble": false,
+        "page_and_exercise": "pg. 2 exercise 1"
+        "book": {
+                "id": 5,
+                "title": "Book 5",
+                "author": "Author 1",
+                "date": "1980",
+                "link": "www.book5.com"
+        }
+    },
     ...
 ]
 ```
