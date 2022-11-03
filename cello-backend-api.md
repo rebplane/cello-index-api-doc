@@ -222,6 +222,57 @@ Example response: /api/exerciseinfo?page=1
 }
 ```
 
+## Get a list of all exercises in a book
+``` 
+GET /api/exerciseinfo/book/<book_id>
+```
+Parameters:
+Name | Type | Default | Description | 
+------------ | ------------ | ---| ---|
+page | INTEGER | 1
+page_size | INTEGER | 50 | The number of exercises requested (maximum 100)
+
+Example response: /api/exerciseinfo/book/2/?page=1
+```
+{
+    "count": 65,
+    "next": "http://127.0.0.1:8000/api/exerciseinfo/book/2/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": 395,
+            "side": "Left Side",
+            "page_and_exercise": "pp. 4–16, Exercises 1–40",
+            "tenor": false,
+            "treble": false,
+            "book_id": 2,
+            "book": {
+                "id": 2,
+                "title": "La Technique du Violoncelle, Part Two, Gammes et Arpèges",
+                "author": "Bazelaire, Paul",
+                "date": "1925",
+                "link": "https://imslp.org/wiki/La_Technique_du_Violoncelle_(Bazelaire%2C_Paul)"
+            }
+        },
+        {
+            "id": 527,
+            "side": "Left Side",
+            "page_and_exercise": "pp. 18–47, Scales and Arpeggios in all Major and Minor Keys",
+            "tenor": false,
+            "treble": true,
+            "book_id": 2,
+            "book": {
+                "id": 2,
+                "title": "La Technique du Violoncelle, Part Two, Gammes et Arpèges",
+                "author": "Bazelaire, Paul",
+                "date": "1925",
+                "link": "https://imslp.org/wiki/La_Technique_du_Violoncelle_(Bazelaire%2C_Paul)"
+            }
+        }
+    ]
+}
+```
+
 ## Get the exercise info of an exercise
 ``` 
 GET /api/exerciseinfo/<num>
