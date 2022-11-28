@@ -1,3 +1,7 @@
+Out of date. This was only used for planning purposes.
+
+Docs are now located here: https://cello-exercise-index.herokuapp.com/swagger/
+
 # API Documentation (Cello Exercise Index)
 
 ## Table of contents
